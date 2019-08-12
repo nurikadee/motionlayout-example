@@ -1,0 +1,50 @@
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@+id/start"
+        motion:duration="1000"
+        motion:motionInterpolator="linear">
+        <OnSwipe
+            motion:dragDirection="dragRight"
+            motion:touchAnchorId="@+id/sunMoon"
+            motion:touchAnchorSide="right" />
+
+        <ConstraintSet android:id="@+id/start">
+            <Constraint
+                android:id="@+id/sunMoon"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="8dp"
+                motion:layout_constraintBottom_toBottomOf="@+id/sunMoonPosition"
+                motion:layout_constraintStart_toStartOf="parent" />
+        </ConstraintSet>
+
+        <ConstraintSet android:id="@+id/end">
+            <Constraint
+                android:id="@id/sunMoon"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginEnd="8dp"
+                android:text="Button"
+                motion:layout_constraintBottom_toBottomOf="@+id/sunMoonPosition"
+                motion:layout_constraintEnd_toEndOf="parent" />
+        </ConstraintSet>
+
+        <KeyFrameSet>
+            <KeyAttribute
+                android:rotation="-45"
+                android:scaleX="2"
+                android:scaleY="2"
+                motion:framePosition="50"
+                motion:motionTarget="@id/sunMoon" />
+            <KeyPosition
+                motion:framePosition="50"
+                motion:keyPositionType="pathRelative"
+                motion:motionTarget="@id/sunMoon"
+                motion:percentY="-0.3" />
+        </KeyFrameSet>
+    </Transition>
+
+</MotionScene>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nurika.motionlayout.widget.ViewPagerHeader xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/motionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    app:layoutDescription="@xml/scene_parallax"
+    app:motionDebug="SHOW_PATH">
+
+    <ImageView
+        android:id="@+id/city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:scaleType="center"
+        android:src="@drawable/ic_city" />
+
+    <ImageView
+        android:id="@+id/tree1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_tree" />
+
+    <ImageView
+        android:id="@+id/tree2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_tree" />
+
+    <ImageView
+        android:id="@+id/car"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_car" />
+</com.nurika.motionlayout.widget.ViewPagerHeader>
